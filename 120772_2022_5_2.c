@@ -10,8 +10,9 @@ int maximum(int *c1,int *c2){
 int main()
 {
     int c1,c2;
+    int s;
     scanf("%d %d",&c1,&c2);
-    //maximum(&c1,&c2);
-    printf("%d",maximum(&c1,&c2));
+    s = maximum(&c1,&c2);
+    printf("Cislo %d je vacsie.\n",s);
     return 0;
 }
