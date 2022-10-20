@@ -1,20 +1,24 @@
 #include <stdio.h>
-void vymen(int *, int *);
+void vymen(int **, int **);
 int main()
-{
+{ //výmena adries
+    int *p_a,*p_b;
     int a = 10,b = 14;
-    printf("p_a: %p %d\n",&a,a);
-    printf("p_b: %p %d\n",&b,b);
-    vymen(&a,&b);
-    printf("p_a: %p %d\n",&a,a);
-    printf("p_b: %p %d\n",&b,b); 
+    p_a=&a;
+    p_b=&b;
+    printf("p_a: %p %d\n",p_a,*p_a);
+    printf("p_b: %p %d\n",p_b,*p_b);
+    vymen(&p_a,&p_b);
+    printf("p_a: %p %d\n",p_a,*p_a);
+    printf("p_b: %p %d\n",p_b,*p_b); 
     return 0;
 }
-void vymen(aa,bb)
-int *aa,*bb;
+void vymen(int **p_a,int **p_b)
+
 {
-    int sw;
-    sw = *aa;
-    *aa = *bb;
-    *bb =sw;
+    //vymena adries
+    int *sw;
+    sw = *p_a;
+    *p_a = *p_b;
+    *p_b =sw;
 }

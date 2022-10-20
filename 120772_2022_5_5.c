@@ -20,17 +20,15 @@ int delitele(int x[], int pocetx, int y[], int k)
 }
 int main()
 {
-    int x[10],pocetx;
+    int x[10]={4,7,10,2,3,9,6,5,8,12};
     int y[10];
     int i = 0;
-    scanf("%d",&pocetx);
-    for(i = 0; i < pocetx;i++)
-        scanf("%d",&x[i]);
-    int pocety = delitele(x,pocetx,y,24);
+    int pocetx = 10;
+    int pocety = delitele(x,pocetx,y,24); //prekopírovanie prvkov
     printf("pocety: %d\ny: {",pocety);
     for(i=0;i < pocety;i++)
     {
-        if(i > 0)
+        if(i > 0) //vypísanie zátvoriek a čiarok
             printf(", ");
         printf("%d",y[i]);
     }
